@@ -1,0 +1,173 @@
+– <!DOCTYPE html>
+<HTML>
+
+<!--以下定义头部信息内容-->
+<HEAD>
+	<!--标题为-->
+<title>网页制作教程大作业2-CSS</title>
+	<!--收藏夹内显示为-->
+<meta name="description" cntent="网页2">
+	<!--使用UTF-8编码方式-->
+<meta charset="UTF-8">
+	<!--作者和版权-->
+<meta name = "author" content="2153061 谢嘉麒">
+<meta name="copyright" content="Tongji University">
+
+<style type="text/css">
+body{/*页面基本属性 设置背景为桔黄色*/
+	background-color: #FFA500;
+	font-size: 30px;
+}
+
+/*出版社的位置*/
+#publisher_pos{
+	position: absolute;
+	bottom:10px;
+	left: 500px;
+}
+
+/*右侧图片的位置*/
+#picture_pos{
+	position: absolute;
+	bottom: 450px;
+	left: 770px;
+}
+
+/*英文文字的位置*/
+#en_pos{
+	position: absolute;
+	bottom: 450px;
+	left: 250px;
+}
+
+/*中文汉字的位置*/
+#ch_pos{
+	position: absolute;
+	bottom: 150px;
+	left: 250px;	
+}
+
+/*作者的位置*/
+#author_pos{
+    position: absolute;
+	bottom: 120px;
+	left: 770px;		
+}
+
+/*英文文字大小及字体*/
+.passage_en{
+	font-family: "Times New Roman",Times,serif;
+	font-size: 0.75em;
+}
+
+/*白色字体*/
+.en_type1{
+	color: whitesmoke;
+}
+
+/*棕色字体*/
+.en_type2{
+	color: #A52A2A;
+}
+
+/*中文汉字大小及字体*/
+.passage_ch{
+	font-family: "yanzqzt";
+	font-size: 3.75em;
+}
+
+/*正常粗细字体*/
+.ch_type1{
+	font-weight: normal;
+}
+
+/*较粗字体*/
+.ch_type2{
+	font-weight: 900;
+}
+
+/*作者字体*/
+.author_type{
+    font-weight: 300;	
+}
+
+/*较小中文汉字类型*/
+.passage_ch2{
+	font-family: "yanzqzt";
+	font-size: 1.5em;	
+}
+
+/*作者汉字类型*/
+.passage_author{
+	font-family: "yanzqzt";
+	font-size: 0.5em;	
+}
+
+</style>
+
+</HEAD>
+
+	<!--以下定义页面主体内容-->
+<body>
+	
+	<!--导入异步图书标志-->
+	      <img src="异步图书标志.jpg" width=30 alt="floating"/>
+	      异步图书
+
+	      <!--导入右侧图片-->
+	      <div id="picture_pos">
+	       <img src="1.jpg" width=200 alt="floating"/>
+	      </div>
+
+<!--设置英文-->
+	<div id="en_pos">
+		<p1 class="passage_en en_type1">
+			  THE SELF TAUGHT<br>
+			  PROGRAMMING<br>
+		</p1>
+
+		<p2 class="passage_en en_type2">
+			The Definite Guide to<br>
+			Programming Professionally<br>
+		</p2>
+	</div>
+
+<!--设置中文-->
+	<div id="ch_pos">
+		<p3 class="passage_ch ch_type2">
+			Python
+		</p3>
+
+		<p4 class="passage_ch ch_type1">
+			编程<br>
+		</p4>
+
+		<p3 class="passage_ch ch_type2">
+			无师自通
+		</p3>
+
+		<p4 class="passage_ch ch_type1">
+			|
+		</p4>
+
+	</div>
+
+<!--设置小字体及作者-->
+	<div id="author_pos">
+		<p5 class="passage_ch2 ch_type1">
+			专业程序员的养成<br>
+		</p5>
+
+		<p5 class="passage_author author_type">
+			<pre>             [美]科里·阿尔托夫（Cory Althof)/著<br/>
+			               宋秉金译</pre>
+		</p5>
+	</div>
+
+<!--设置出版社-->
+	<div id="publisher_pos">
+		中国工信出版集团 <B>人民邮电出版社</B>
+	</div>
+</body>
+
+</HTML>

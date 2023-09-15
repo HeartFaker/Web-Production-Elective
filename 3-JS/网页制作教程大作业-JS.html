@@ -1,0 +1,189 @@
+– <!DOCTYPE html>
+<HTML>
+
+<!--以下定义头部信息内容-->
+<HEAD>
+	<!--标题为-->
+<title>网页制作教程大作业2-CSS</title>
+	<!--收藏夹内显示为-->
+<meta name="description" cntent="网页2">
+	<!--使用UTF-8编码方式-->
+<meta charset="UTF-8">
+	<!--作者和版权-->
+<meta name = "author" content="2153061 谢嘉麒">
+<meta name="copyright" content="Tongji University">
+
+<style type="text/css">
+</style>
+
+<script type=“text/javascript”>
+	</script>
+</HEAD>
+
+<body>
+<br>
+	<table align="left">
+	<tbody>
+		<tr>
+			<td><B>缴纳项目</B></td>
+			<td><B>个人缴费比例%</B></td>
+			<td><B>单位缴费比例%</B></td>
+		</tr>
+		<tr>
+			<td>养老保险</td>
+			<td>8%</td>
+			<td>20%</td>
+		</tr>
+		<tr>
+			<td>医疗保险</td>
+			<td>2%</td>
+			<td>6-10%</td>
+		</tr>
+		<tr>
+			<td>失业保险</td>
+			<td>0.5-1%</td>
+			<td>1.50%</td>
+		</tr>
+		<tr>
+			<td>工伤保险</td>
+			<td> </td>
+			<td>0.5-1.2%</td>
+		</tr>
+		<tr>
+			<td>生育保险</td>
+			<td> </td>
+			<td>0.80%</td>
+		</tr>
+		<tr>
+			<td>公积金</td>
+			<td>10-12%</td>
+			<td>10-12%</td>
+		</tr>
+	</tbody>
+</table>
+
+
+<table align="center">
+	<tbody>
+		<tr>
+			<td><B>级数</B></td>
+			<td><B>全年应纳税所得额</B></td>
+			<td><B>税率(%)</B></td>
+			<td><B>速算扣除数</B></td>
+		</tr>
+		<tr>
+			<td>1</td>
+			<td>不超过36000元的</td>
+			<td>3</td>
+			<td>0</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>超过36000元至144000元的部分</td>
+			<td>10</td>
+			<td>2520</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>超过144000元至3000000元的部分</td>
+			<td>20</td>
+			<td>16920</td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td>超过3000000元至420000元的部分</td>
+			<td>25</td>
+			<td>31920</td>
+		</tr>
+		<tr>
+			<td>5</td>
+			<td>超过420000元至660000元的部分</td>
+			<td>30</td>
+			<td>52920</td>
+		</tr>
+		<tr>
+			<td>6</td>
+			<td>超过660000元至960000元的部分</td>
+			<td>35</td>
+			<td>85920</td>
+		</tr>
+		<tr>
+			<td>7</td>
+			<td>超过960000元的部分</td>
+			<td>45</td>
+			<td>181920</td>
+		</tr>
+	</tbody>
+</table>
+<br>
+
+<script>
+	 function info(){ 
+	x=document.form1.t1.value;
+	p1=0.0;
+	p2=0.0;
+	s1=0.0;
+	s2=0.0;
+	p3=0.0;
+	tax=0.0;
+	if(x<5000){ /*小于5000 免税*/
+		p1=0;
+		p2=0;
+		s1=0;
+		s2=0;
+		p3=x; 
+		}
+	else{
+		p1=x*0.335;
+		p2=x*0.12;
+		s1=x*0.11;
+		s2=x*0.12;
+		if(x<=36000){
+			tax=0.03*(x-s1-s2-5000);
+		}
+		else if(x>36000&&x<=144000){
+			tax=0.1*(x-s1-s2-5000)-2520;
+		}
+		else if(x>144000&&x<=3000000){
+			tax=0.2*(x-s1-s2-5000)-16920;
+		}
+		else if(x>3000000&&x<=420000){
+			tax=0.25*(x-s1-s2-5000)-31920;
+		}
+		else if(x>420000&&x<=660000){
+			tax=0.3*(x-s1-s2-5000)-52920;
+		}
+		else if(x>660000&&x<=960000){
+			tax=0.35*(x-s1-s2-5000)-85920;
+		}
+		else if(x>960000){
+			tax=0.45*(x-s1-s2-5000)-181920;
+		}
+	}
+	p3=x-tax;
+	document.form1.p1.value=p1;
+	document.form1.p2.value=p2;
+	document.form1.p3.value=p3;
+	document.form1.s1.value=s1;
+	document.form1.s2.value=s2;
+	}
+    </script>
+
+     <font color="red">
+    单位支出：<br>
+</font>
+
+	<form name="form1" method="post" action=""> 
+	个人税前收入:<input type="text" name="t1" value="1000"><br>
+	<input type="button" onclick="info()" value="test"><br><br> 
+	单位缴付五险:<input type="text" name="p1"><br> 
+	单位缴付一金:<input type="text" name="p2"><br> 
+	 <font color="red">
+    个人所得：<br>
+</font>
+	账户五险:<input type="text" name="s1"><br>
+	账户一金:<input type="text" name="s2"><br> 
+	税后收入:<input type="text" name="p3"><br> 
+
+</form>
+	</body>
